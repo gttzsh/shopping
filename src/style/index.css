@@ -1,0 +1,25 @@
+.shopTable {
+  width: 500px;
+  margin: auto;
+  border: 1px solid #000;
+}
+.tab {
+  border-bottom: 1px solid #000;
+  height: 30px;
+  padding-left: 5px;
+  line-height: 30px;
+}
+ul {
+  padding-inline-start: 0px;
+}
+ul li {
+  list-style: none;
+  overflow: hidden;
+  padding: 0px 5px 0 5px;
+}
+.shopping, .commond{
+  float: right;
+}
+.commond a {
+  margin-left: 10px;
+}
