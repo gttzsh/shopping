@@ -52,6 +52,16 @@ export default {
         (total, curItem) => total+(curItem.quantity * curItem.praice),0
       )
     }
+    //补充reduce用法
+    // arr.reduce(function(prev,cur,index,arr){
+    // ...
+    // }, init);
+    // 数组项之和
+    // var sum = arr.reduce((pre, cur) => pre + cur,0)
+    // 数组项最大值
+    // var max = arr.reduce((pre,cur) => Math.max(pre,cur))
+    // 数组去重
+    // var newArr = arr.reducer((pre,cur) =>{pre.indexOf(cur) === -1 && pre.push(cur) return pre },[])
   },
   methods: {
     deleteHander(id, e) {

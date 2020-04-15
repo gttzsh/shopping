@@ -61,10 +61,6 @@ export default {
         id,
         quantity: 1
       })
-      // const a = pro.praice * pro.quantity
-      // console.log(pro.praice, pro.quantity);
-      // console.log(Number(pro.praice * pro.quantity));
-
     },
     //减少商品数量
     deleteQuantity(id) {
