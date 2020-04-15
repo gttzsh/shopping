@@ -10,12 +10,16 @@
       </li>
     </ul>
     <hr/>
+    <Total :total="totalPraice"/>
   </div>
 </template>
 <script>
 import event from '../event'
-// import Total from './Total'
+import Total from './Total'
 export default {
+  components: {
+    Total
+  },
   props: {
     carlist: {
       type: Array,
@@ -42,6 +46,11 @@ export default {
           quantity: listitem.quantity
         }
       })
+    },
+    totalPraice() {
+      return this.list.reduce(
+        (total, curItem) => total+(curItem.quantity * curItem.praice),0
+      )
     }
   },
   methods: {
