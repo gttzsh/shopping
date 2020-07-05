@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+     <Upload/>
     <div class="shopTable">
       <div class="tab">购物车</div>
       <ProductionsList :prolist="productionList"/>
@@ -14,12 +15,14 @@
 <script>
 import ProductionsList from './components/ProductionsList'
 import CarList from './components/CarList'
+import Upload from './components/upload'
 import event from './event'
 
 export default {
   components: {
     ProductionsList,
     CarList,
+    Upload
   },
   data() {
     return {
@@ -72,6 +75,11 @@ export default {
       if(car.quantity <=0) {
         this.carList = this.carList.filter(item => item.id !==id)
       }
+      //--------------
+      // var index = this.carList.findIndex(item => {
+      //   return item.id == id;
+      // })
+      // this.carList.splice(index,1);
     },
     //增加
     addQuantity(id) {
